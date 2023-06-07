@@ -9,59 +9,34 @@
   </head>
   <body>
     <header>
-      <a href="#">
-        <img
-          width="163px"
-          height="35px"
-          src="./img/logo.svg"
-          alt="Логотип сайта"
-        />
-      </a>
       <div class="container">
         <div class="wrapper">
+          <a href="#">
+            <img
+              width="163px"
+              height="35px"
+              src="./img/logo.svg"
+              alt="Логотип сайта"
+            />
+          </a>
+
           <nav>
             <ul>
-              <li>
-                <img
-                  width="12px"
-                  height="12px"
-                  src="./img/nav_1.svg"
-                  alt="Поиск"
-                />
-                <form>
-                  <input type="text" placeholder="Поиск по сайту" />
-                </form>
+              <li class="nav_item nav__item-one">
+                <input type="text" placeholder="Поиск по сайту" />
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="8px"
-                    height="8px"
-                    src="./img/nav_2.svg"
-                    alt="Вход"
-                  />
+              <li class=" nav__item-two">
+                <a class="nav__img-two" href="#">
                   <p>Войти</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="9px"
-                    height="9px"
-                    src="./img/nav_3.svg"
-                    alt="Сравнение"
-                  />
+              <li class="nav__item-three">
+                <a class="nav__img-three" href="#">
                   <p>Сравнить</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="10px"
-                    height="10px"
-                    src="./img/nav_4.svg"
-                    alt="Корзина"
-                  />
+              <li class="nav__item-four ">
+                <a class="nav__img-four" href="#">
                   <p>Корзина</p>
                 </a>
               </li>
@@ -90,6 +65,7 @@
       <section>
         <div>
           <div>
+            <h1>Главная страница DEVICE</h1>
             <div>
               <img
                 width="384px"
@@ -99,12 +75,26 @@
               />
             </div>
             <div>
-              <h1>Делай селфи,<br />как Бен Стиллер!</h1>
+              <span>01</span>
+              <h2>Делай селфи,<br />как Бен Стиллер!</h2>
               <p>
                 Самая длинная палка для селфи доступна в нашем магазине.Восемь
                 (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
-              <a href="#">Подробнее</a>
+              <div>
+                <a href="#">Подробнее</a>
+                <ul>
+                  <li>
+                    <button></button>
+                  </li>
+                  <li>
+                    <button></button>
+                  </li>
+                  <li>
+                    <button></button>
+                  </li>
+                </ul>
+              </div>
               <ul>
                 <li>
                   <span>8,5 м</span>
@@ -214,14 +204,14 @@
               </li>
             </ul>
             <div>
-              <h1>Доставка</h1>
+              <h2>Доставка</h2>
               <p>
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду
                 совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
                 на ваш этаж.
               </p>
+              <img src="./img/delivery.svg" alt="Доставка" />
             </div>
-            <img src="./img/delivery.svg" alt="Доставка" />
           </div>
         </div>
       </section>
@@ -279,7 +269,7 @@
         <div>
           <div>
             <div>
-              <h1>О нас</h1>
+              <h2>О нас</h2>
               <p>
                 Огромный выбор гаджетов не оставит равнодушным гика, который
                 есть в каждом из нас.
@@ -303,7 +293,7 @@
             </div>
 
             <div>
-              <h1>Контакты</h1>
+              <h2>Контакты</h2>
               <p>
                 Вы можете забрать товар сами, заехав в наш офис. Заодно, вы
                 сможете проверить работоспособность покупки. Всякое бывает.
@@ -318,98 +308,100 @@
 
     <footer>
       <div>
-        <ul>
-          <li>
-            <a href="#">
-              <img width="8px" height="8px" src="./img/nav_2.svg" alt="Вход" />
-              <p>Войти</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                width="9px"
-                height="9px"
-                src="./img/nav_3.svg"
-                alt="Сравнение"
-              />
-              <p>Сравнить</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                width="10px"
-                height="10px"
-                src="./img/nav_4.svg"
-                alt="Корзина"
-              />
-              <p>Корзина</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+        <div>
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <img width="8px" height="8px" src="./img/nav_2.svg" alt="Вход" />
+                  <p>Войти</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    width="9px"
+                    height="9px"
+                    src="./img/nav_3.svg"
+                    alt="Сравнение"
+                  />
+                  <p>Сравнить</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    width="10px"
+                    height="10px"
+                    src="./img/nav_4.svg"
+                    alt="Корзина"
+                  />
+                  <p>Корзина</p>
+                </a>
+              </li>
+            </ul>
+            <div>
+              <a href="#">
+                <img
+                  width="163px"
+                  height="35px"
+                  src="./img/logo.svg"
+                  alt="Логотип сайта"
+                />
+              </a>
+            </div>
+          </div>
 
-      <div>
-        <a href="#">
-          <img
-            width="163px"
-            height="35px"
-            src="./img/logo.svg"
-            alt="Логотип сайта"
-          />
-        </a>
-      </div>
+          <div>
+            <address>г. Москва, ул. Строителей, 15</address>
 
-      <div>
-        <span>г. Москва, ул. Строителей, 15</span>
-        <ul>
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Гарантия</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-        <span>Тел.:+7(495)495-95-95</span>
-      </div>
+            <ul>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Гарантия</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <span>Тел.:<a href="tel:74954959595">+7(495)495-95-95</a></span>
+          </div>
 
-      <div>
-        <ul>
-          <li>
-            <a href="#">
-              <img
-                width="32px"
-                height="32px"
-                src="./img/facebook.svg"
-                alt="Facebook"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                width="32px"
-                height="32px"
-                src="./img/instagram.svg"
-                alt="Instagram"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                width="32px"
-                height="32px"
-                src="./img/twitter.svg"
-                alt="Twitter"
-              />
-            </a>
-          </li>
-          <li>
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <img
+                    width="32px"
+                    height="32px"
+                    src="./img/facebook.svg"
+                    alt="Facebook"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    width="32px"
+                    height="32px"
+                    src="./img/instagram.svg"
+                    alt="Instagram"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    width="32px"
+                    height="32px"
+                    src="./img/twitter.svg"
+                    alt="Twitter"
+                  />
+                </a>
+              </li>
+            </ul>
             <a href="#">
               <img
                 width="27px"
@@ -418,8 +410,8 @@
                 alt="HTML Academy"
               />
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
