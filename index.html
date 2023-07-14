@@ -8,52 +8,60 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
-        <div class="wrapper">
-          <a href="#">
+        <div class="header__wrapper">
+          <a class="header__logo" href="#">
             <img
+              class="header__hover"
               width="163px"
               height="35px"
               src="./img/logo.svg"
               alt="Логотип сайта"
             />
           </a>
-
-          <nav>
-            <ul>
-              <li class="nav_item nav__item-one">
-                <input type="text" placeholder="Поиск по сайту" />
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item header__item-search">
+                <input
+                  class="heder__search"
+                  type="text"
+                  placeholder="Поиск по сайту"
+                />
               </li>
-              <li class=" nav__item-two">
-                <a class="nav__img-two" href="#">
-                  <p>Войти</p>
+              <li class="header__item header__item-login">
+                <a class="heder__img heder__img-login" href="#">
+                  <p class="header__login-text header__hover">Войти</p>
                 </a>
               </li>
-              <li class="nav__item-three">
-                <a class="nav__img-three" href="#">
-                  <p>Сравнить</p>
+              <li class="header__item header__item-compare">
+                <a class="heder__img heder__img-compare" href="#">
+                  <p class="header__compare-text header__hover">Сравнить</p>
                 </a>
               </li>
-              <li class="nav__item-four ">
-                <a class="nav__img-four" href="#">
-                  <p>Корзина</p>
+              <li class="header__item header__item-car">
+                <a class="heder__img heder__img-car" href="#">
+                  <p class="heder__car-text header__hover">Корзина</p>
                 </a>
               </li>
             </ul>
 
-            <ul>
-              <li>
-                <a href="#">Kаталог товаров</a>
+            <ul class="header__list-continuation">
+              <li class="header__item header__item-catalog">
+                <a
+                  class="heder__link heder__link-catalog header__hover"
+                  href="#"
+                  >Kаталог товаров</a
+                >
               </li>
-              <li>
-                <a href="#">Доставка</a>
+              <li class="header__item header__item-delivery">
+                <a class="heder__link header__hover" href="#">Доставка</a>
               </li>
-              <li>
-                <a href="#">Гарантия</a>
+              <li class="header__item-guarantee">
+                <a class="heder__link header__hover" href="#">Гарантия</a>
               </li>
-              <li>
-                <a href="#">Контакты</a>
+              <li class="header__item-contacts">
+                <a class="heder__link header__hover" href="#">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -62,126 +70,152 @@
     </header>
 
     <main>
-      <section>
-        <div>
-          <div>
-            <h1>Главная страница DEVICE</h1>
-            <div>
+      <section class="main">
+        <div class="container">
+          <div class="main__wrapper">
+            <h1 class="visually-hidden">Главная страница DEVICE</h1>
+            <div class="main__img-container">
               <img
+                class="main__img"
                 width="384px"
                 height="486px"
                 src="./img/selfie_stick.png"
                 alt="Селфи палка"
               />
             </div>
-            <div>
-              <span>01</span>
-              <h2>Делай селфи,<br />как Бен Стиллер!</h2>
-              <p>
-                Самая длинная палка для селфи доступна в нашем магазине.Восемь
-                (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+            <div class="main__description">
+              <span class="main__description-elements"></span>
+              <h2 class="caption main__caption">
+                Делай селфи,<br />как Бен Стиллер!
+              </h2>
+              <p class="main__text">
+                Самая длинная палка для селфи доступна в нашем магазине. <br />
+                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
-              <div>
-                <a href="#">Подробнее</a>
-                <ul>
-                  <li>
-                    <button></button>
+              <div class="main__detail">
+                <div class="main__link-position">
+                  <a class="main__link" href="#">Подробнее</a>
+                </div>
+                <ul class="main__list">
+                  <li class="main__item">
+                    <button class="main__button">
+                      <button class="main__button-mini"></button>
+                    </button>
                   </li>
-                  <li>
-                    <button></button>
+                  <li class="main__item">
+                    <button class="main__button"></button>
                   </li>
-                  <li>
-                    <button></button>
+                  <li class="main__item">
+                    <button class="main__button"></button>
                   </li>
                 </ul>
               </div>
-              <ul>
-                <li>
-                  <span>8,5 м</span>
-                  <span>Длина палки</span>
-                </li>
-                <li>
-                  <span>5 кг</span>
-                  <span>Вес палки</span>
-                </li>
-                <li>
-                  <span>Карбон</span>
-                  <span>Вес палки</span>
-                </li>
-              </ul>
+              <div>
+                <ul class="main__link-description">
+                  <li
+                    class="main__item-description main__item-description--length"
+                  >
+                    <span class="main__item-element">8,5 м</span>
+                    <span class="main__item-info">Длина палки</span>
+                  </li>
+                  <li
+                    class="main__item-description main__item-description--weight"
+                  >
+                    <span class="main__item-element">5 кг</span>
+                    <span class="main__item-info">Вес палки</span>
+                  </li>
+                  <li class="main__item-description">
+                    <span class="main__item-element">Карбон</span>
+                    <span class="main__item-info">Материал</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
-            <ul>
-              <li>
-                <a href="#">
-                  <img
-                    width="160px"
-                    height="160px"
-                    src="./img/glasses.svg"
-                    alt="Виртуальная реальность"
-                  />
-                  <p>Виртуальная реальность</p>
+      <section class="catalog">
+        <div class="container">
+          <div class="catalog__wrapper">
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  <div class="catalog__img">
+                    <img
+                      width="96px"
+                      height="54px"
+                      src="./img/glasses.svg"
+                      alt="Виртуальная реальность"
+                    />
+                  </div>
+                  <p class="catalog__text">Виртуальная реальность</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="160px"
-                    height="160px"
-                    src="./img/selfie.svg"
-                    alt="Моноподы для селфи"
-                  />
-                  <p>Моноподы для селфи</p>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  <div class="catalog__img">
+                    <img
+                      width="86px"
+                      height="117px"
+                      src="./img/selfie.svg"
+                      alt="Моноподы для селфи"
+                    />
+                  </div>
+                  <p class="catalog__text">Моноподы<br>для селфи</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="160px"
-                    height="160px"
-                    src="./img/camera.svg"
-                    alt="Экшн-камеры"
-                  />
-                  <p>Экшн-камеры</p>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  <div class="catalog__img">
+                    <img
+                      width="71px"
+                      height="87px"
+                      src="./img/camera.svg"
+                      alt="Экшн-камеры"
+                    />
+                  </div>
+                  <p class="catalog__text">Экшн-камеры</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="160px"
-                    height="160px"
-                    src="./img/fitness.svg"
-                    alt="Фитнес-браслеты"
-                  />
-                  <p>Фитнес-браслеты</p>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  <div class="catalog__img">
+                    <img
+                      width="107px"
+                      height="65px"
+                      src="./img/fitness.svg"
+                      alt="Фитнес-браслеты"
+                    />
+                  </div>
+                  <p class="catalog__text">Фитнес-браслеты</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="160px"
-                    height="160px"
-                    src="./img/watch.svg"
-                    alt="Умные часы"
-                  />
-                  <p>Умные часы</p>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  <div class="catalog__img">
+                    <img
+                      width="56px"
+                      height="98px"
+                      src="./img/watch.svg"
+                      alt="Умные часы"
+                    />
+                  </div>
+                  <p class="catalog__text">Умные часы</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="160px"
-                    height="160px"
-                    src="./img/drone.svg"
-                    alt="Квадрокоптеры"
-                  />
-                  <p>Квадрокоптеры</p>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  <div class="catalog__img">
+                    <img
+                      class="catalog__img"
+                      width="132px"
+                      height="69px"
+                      src="./img/drone.svg"
+                      alt="Квадрокоптеры"
+                    />
+                  </div>
+                  <p class="catalog__text">Квадрокоптеры</p>
                 </a>
               </li>
             </ul>
@@ -189,40 +223,62 @@
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
-            <ul>
-              <li>
-                <button type="button">Доставка</button>
+      <section class="delivery">
+        <div class="container">
+          <div class="delivery__wrapper">
+            <ul class="delivery__list">
+              <li class="delivery__item">
+                <button
+                  class="delivery__button delivery__button--active"
+                  type="button"
+                >
+                  Доставка
+                </button>
               </li>
-              <li>
-                <button type="button">Гарантия</button>
+              <li class="delivery__item delivery__item--possive">
+                <button
+                  class="delivery__button"
+                  type="button"
+                >
+                  Гарантия
+                </button>
               </li>
-              <li>
-                <button type="button">Кредит</button>
+              <li class="delivery__item delivery__item--possive">
+                <button
+                  class="delivery__button"
+                  type="button"
+                >
+                  Кредит
+                </button>
               </li>
             </ul>
-            <div>
-              <h2>Доставка</h2>
-              <p>
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
-                на ваш этаж.
-              </p>
-              <img src="./img/delivery.svg" alt="Доставка" />
+            <div class="delivery__description">
+              <div>
+                <h2 class="caption">Доставка</h2>
+                <p class="delivery__text">
+                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                  совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
+                  на ваш этаж.
+                </p>
+              </div>
+              <img
+                class="delivery__img"
+                src="./img/delivery.svg"
+                alt="Доставка"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
-            <ul>
-              <li>
-                <a href="#">
+      <section class="company">
+        <div class="container">
+          <div class="company__wrapper">
+            <ul class="company__list">
+              <li class="company__item">
+                <a class="company__link" href="#">
                   <img
+                    class="company__img company__dji"
                     width="260px"
                     height="100px"
                     src="./img/dji.svg"
@@ -230,9 +286,10 @@
                   />
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="company__item">
+                <a class="company__link" href="#">
                   <img
+                    class="company__img company__sp"
                     width="260px"
                     height="100px"
                     src="./img/sp.svg"
@@ -240,9 +297,10 @@
                   />
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="company__item">
+                <a class="company__link" href="#">
                   <img
+                    class="company__img company__go-pro"
                     width="260px"
                     height="100px"
                     src="./img/go_pro.svg"
@@ -250,9 +308,10 @@
                   />
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="company__item">
+                <a class="company__link" href="#">
                   <img
+                    class="company__img company__vive"
                     width="260px"
                     height="100px"
                     src="./img/vive.svg"
@@ -265,115 +324,117 @@
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
-            <div>
-              <h2>О нас</h2>
-              <p>
+      <section class="about">
+        <div class="container">
+          <div class="about__wrapper">
+            <div class="about__box">
+              <h2 class="caption about__caption">О нас</h2>
+              <p class="about__text">
                 Огромный выбор гаджетов не оставит равнодушным гика, который
                 есть в каждом из нас.
               </p>
-              <p>
+              <p class="about__text">
                 Мы можем доставить ваш товар в самые отдаленные точки России!
                 DEVICE работает со многими транспортными компаниями:
               </p>
-              <ul>
-                <li>
-                  <span>Деловые линии</span>
+              <ul class="about__list">
+                <li class="about__item">
+                  <span class="about__element">Деловые линии</span>
                 </li>
-                <li>
-                  <span>Автотрейдинг</span>
+                <li class="about__item">
+                  <span class="about__element">Автотрейдинг</span>
                 </li>
-                <li>
-                  <span>ЖелДорЭкспедиция</span>
+                <li class="about__item">
+                  <span class="about__element">ЖелДорЭкспедиция</span>
                 </li>
               </ul>
-              <a href="#">Подробнее о нас</a>
+              <a class="about__link" href="#">Подробнее о нас</a>
             </div>
 
-            <div>
-              <h2>Контакты</h2>
-              <p>
+            <div class="about__contacts about__box">
+              <h2 class="caption about__caption">Контакты</h2>
+              <p class="about__text">
                 Вы можете забрать товар сами, заехав в наш офис. Заодно, вы
                 сможете проверить работоспособность покупки. Всякое бывает.
               </p>
-              <img src="./img/map.jpg" alt="Карта офиса" />
-              <a href="#">Напишите нам</a>
+              <img
+                class="about__contacts-img"
+                width="560px"
+                height="220px"
+                src="./img/map.jpg"
+                alt="Карта офиса"
+              />
+              <a class="about__link" href="#">Напишите нам</a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div>
-        <div>
-          <div>
-            <ul>
-              <li>
-                <a href="#">
-                  <img width="8px" height="8px" src="./img/nav_2.svg" alt="Вход" />
-                  <p>Войти</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__item footer__item-login">
+                <a class="footer__img footer__img-login" href="#">
+                  <p class="footer__text">Войти</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="9px"
-                    height="9px"
-                    src="./img/nav_3.svg"
-                    alt="Сравнение"
-                  />
-                  <p>Сравнить</p>
+              <li class="footer__item footer__item-compare">
+                <a class="footer__img footer__img-compare" href="#">
+                  <p class="footer__text">Сравнить</p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <img
-                    width="10px"
-                    height="10px"
-                    src="./img/nav_4.svg"
-                    alt="Корзина"
-                  />
-                  <p>Корзина</p>
+              <li class="footer__item footer__item-car">
+                <a class="footer__img footer__img-car" href="#">
+                  <p class="footer__text">Корзина</p>
                 </a>
               </li>
             </ul>
             <div>
               <a href="#">
                 <img
+                  class="footer__logo"
                   width="163px"
                   height="35px"
-                  src="./img/logo.svg"
+                  src="./img/footer_logo.svg"
                   alt="Логотип сайта"
                 />
               </a>
             </div>
           </div>
 
-          <div>
-            <address>г. Москва, ул. Строителей, 15</address>
+          <div class="footer__info">
+            <address class="footer__address">
+              г. Москва, ул. Строителей, 15
+            </address>
 
-            <ul>
-              <li>
-                <a href="#">Доставка</a>
+            <ul class="footer__delivery">
+              <li class="footer__delivery-item">
+                <a class="footer__delivery-link" href="#">Доставка</a>
               </li>
-              <li>
-                <a href="#">Гарантия</a>
+              <li class="footer__delivery-item">
+                <a class="footer__delivery-link" href="#">Гарантия</a>
               </li>
-              <li>
-                <a href="#">Контакты</a>
+              <li class="footer__delivery-item">
+                <a class="footer__delivery-link" href="#">Контакты</a>
               </li>
             </ul>
-            <span>Тел.:<a href="tel:74954959595">+7(495)495-95-95</a></span>
+            <span class="footer__tel"
+              >Тел.:<a class="footer__tel" href="tel:74954959595"
+                >+7(495)495-95-95</a
+              ></span
+            >
           </div>
 
-          <div>
-            <ul>
-              <li>
-                <a href="#">
+          <div class="footer__media">
+            <span class="footer__element"></span>
+            <ul class="footer__media-list">
+              <li class="footer__media-item">
+                <a class="footer__media-link" href="#">
                   <img
+                    class="footer__media-img"
                     width="32px"
                     height="32px"
                     src="./img/facebook.svg"
@@ -381,9 +442,10 @@
                   />
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="footer__media-item">
+                <a class="footer__media-link" href="#">
                   <img
+                    class="footer__media-img"
                     width="32px"
                     height="32px"
                     src="./img/instagram.svg"
@@ -391,9 +453,10 @@
                   />
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="footer__media-item">
+                <a class="footer__media-link" href="#">
                   <img
+                    class="footer__media-img"
                     width="32px"
                     height="32px"
                     src="./img/twitter.svg"
@@ -402,8 +465,9 @@
                 </a>
               </li>
             </ul>
-            <a href="#">
+            <a class="footer__media-link" href="#">
               <img
+                class="footer__media-img"
                 width="27px"
                 height="34px"
                 src="./img/html.svg"
