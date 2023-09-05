@@ -80,7 +80,7 @@
       </div>
     </header>
 
-    <main class="breadcrumbs">
+    <main>
       <section class="breadcrumbs">
         <div class="container">
           <div class="breadcrumbs__wrapper">
@@ -113,16 +113,12 @@
               <fieldset class="main__filter-inner">
                 <legend class="main__filter">Стоимость</legend>
                 <div class="main__filter-button-inner">
-                  <button class="main__filter-button main__filter-button--min">
-                    <button class="main__filter-button-mini--min"></button>
-                  </button>
-                  <button class="main__filter-button main__filter-button--mix">
-                    <button class="main__filter-button-mini--max"></button>
-                  </button>
+                  <button class="main__filter-button main__filter-button--min"></button>
+                  <button class="main__filter-button main__filter-button--mix"></button>
                 </div>
                 <div class="main__filter-button-price">
-                  <input type="number"  min="0" placeholder="от 0" class="main__filter-button-namber"></input>
-                <input max="5000" placeholder="до 5000" class="main__filter-button-namber"></span>
+                  <input type="number"  min="0" placeholder="от 0" class="main__filter-button-namber">
+                <input max="5000" placeholder="до 5000" class="main__filter-button-namber">
                 </div>
               </fieldset>
               <fieldset class="main__filter-inner main__filter-inner-color">
@@ -130,7 +126,7 @@
                 <ul class="main__filter-color-list">
                   <li class="main__filter-color-item">
                     <input class="visually-hidden filter-color-checkbox" type="checkbox" name="color-group" id="filter-black" checked>
-                    <label class="main__filter-text " for="filter-black">Чёрный</label>
+                    <label class="main__filter-text" for="filter-black">Чёрный</label>
                   </li>
                   <li class="main__filter-color-item">
                     <input class="visually-hidden filter-color-checkbox" type="checkbox" name="color-group" id="filter-white">
@@ -196,48 +192,43 @@
             <div class="catalog">
               <ul class="catalog__list">
                 <li class="catalog__item">
-                  <a class="catalog__link-img" href="#">
+                  <a class="catalog__link-img catalog__link-text" href="#">
                     <img class="catalog__img" src="./img_catalog/item_1.jpg" width="360px" height="380px" alt="Любительская селфи-палка">
-                  </a>
-                  <div class="catalog__link-text-inner">
-                    <a class="catalog__link-text" href="#">
+                    <div class="catalog__link-text-inner">
                       <p class="catalog__text">Любительская селфи-палка</p>
-                    </a>
-                    <span class="catalog__text-price" > 1100 руб.</span>
+                      <span class="catalog__text-price" > 1100 руб.</span>
+                    </div>
+                  </a>
+                  <div class="catalog__preview">
+                    <button class="catalog__preview-button" type="button">В корзину</button>
+                    <p class="catalog__preview-text">Добавить к сравнению</p>
                   </div>
-                </li>
                 <li class="catalog__item">
-                  <a class="catalog__link-img" href="#">
+                  <a class="catalog__link-img catalog__link-text" href="#">
                     <img class="catalog__img" src="./img_catalog/item_2.jpg" width="360px" height="380px" alt="Профессиональная селфи-палка">
-                  </a>
-                  <div class="catalog__link-text-inner">
-                    <a class="catalog__link-text" href="#">
-                      <p class="catalog__text">Профессиональная   селфи-палка</p>
-                    </a>
+                    <div class="catalog__link-text-inner">
+                      <p class="catalog__text">Профессиональная селфи&#8209;палка</p>
                     <span class="catalog__text-price">1500 руб.</span>
                   </div>
+                  </a>
                 </li>
                 <li class="catalog__item">
-                  <a class="catalog__link-img" href="#">
+                  <a class="catalog__link-img catalog__link-text" href="#">
                     <img class="catalog__img" src="./img_catalog/item_3.jpg" width="360px" height="380px" alt="Непотопляемая селфи-палка">
-                  </a>
-                  <div class="catalog__link-text-inner">
-                    <a class="catalog__link-text" href="#">
-                      <p class="catalog__text">Непотопляемая<br>селфи-палка</p>
-                    </a>
+                    <div class="catalog__link-text-inner">
+                      <p class="catalog__text">Непотопляемая селфи&#8209;палка</p>
                     <span class="catalog__text-price">1500 руб.</span>
                   </div>
-                </li>
-                <li class="catalog__item">
-                  <a class="catalog__link-img" href="#">
-                    <img class="catalog__img" src="./img_catalog/item_4.jpg" width="360px" height="380px" alt="Селфи-палка «Следуй за мной»">
                   </a>
-                  <div class="catalog__link-text-inner">
-                    <a class="catalog__link-text" href="#">
+                </li>
+                <li class="catalog__item catalog__item-new">
+                  <a class="catalog__link-img catalog__link-text catalog__link-new" href="#">
+                    <img class="catalog__img " src="./img_catalog/item_4.jpg" width="360px" height="380px" alt="Селфи-палка «Следуй за мной»">
+                    <div class="catalog__link-text-inner">
                       <p class="catalog__text">Селфи-палка «Следуй за мной»</p>
-                    </a>
                     <span class="catalog__text-price">1900 руб.</span>
                   </div>
+                  </a>
                 </li>
               </ul>
 
