@@ -7,7 +7,7 @@
     <title>DEVICE</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
@@ -49,6 +49,7 @@
             <ul class="header__list-continuation">
               <li class="header__item header__item-catalog">
                 <a
+                  id="catalog-link"
                   class="heder__link heder__link-catalog header__hover"
                   href="./catalog.html"
                   >Kаталог товаров</a
@@ -66,33 +67,35 @@
             </ul>
           </nav>
 
-          <div class="header__menu-current delivery__slide ">
-            <ul class="header__list-menu-current">
-              <li class="header__item-menu-current">
-                <a class="header__link-menu-current" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="header__item-menu-current">
-                <a class="header__link-menu-current" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="header__item-menu-current">
-                <a class="header__link-menu-current" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-
-            <ul class="header__list-menu-current">
-              <li class="header__item-menu-current">
-                <a class="header__link-menu-current" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="header__item-menu-current">
-                <a class="header__link-menu-current" href="#">Умные часы</a>
-              </li>
-            </ul>
-
-            <ul class="header__list-menu-current">
-              <li class="header__item-menu-current">
-                <a class="header__link-menu-current" href="#">Квадрокоптер</a>
-              </li>
-            </ul>
+          <div id="menu-current" class="hidden">
+            <div  class="header__menu-current">
+              <ul class="header__list-menu-current">
+                <li class="header__item-menu-current">
+                  <a class="header__link-menu-current" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="header__item-menu-current">
+                  <a class="header__link-menu-current" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="header__item-menu-current">
+                  <a class="header__link-menu-current" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+  
+              <ul class="header__list-menu-current">
+                <li class="header__item-menu-current">
+                  <a class="header__link-menu-current" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="header__item-menu-current">
+                  <a class="header__link-menu-current" href="#">Умные часы</a>
+                </li>
+              </ul>
+  
+              <ul class="header__list-menu-current">
+                <li class="header__item-menu-current">
+                  <a class="header__link-menu-current" href="#">Квадрокоптер</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -257,20 +260,41 @@
           <div class="delivery__wrapper">
             <ul class="delivery__list">
               <li class="delivery__item">
-                <button
+                <div id="delivery-active" class="delivery__button-wrapper">
+                  <button
                   class="delivery__button delivery__button--active"
                   type="button"
                 >
                   Доставка
                 </button>
-              </li>
-              <li class="delivery__item delivery__item--possive">
+                </div>
+
                 <button
+                id="delivery-possive"
+                  class="delivery__button delivery__item--possive hidden"
+                  type="button"
+                >
+                  Доставка
+                </button>
+              </li>
+              <li id="button-guarantee-active" class="delivery__item delivery__item--possive">
+                <button
+                id="button-guarantee"
                   class="delivery__button"
                   type="button"
                 >
                   Гарантия
                 </button>
+
+                <div class="">
+                  <button
+                
+                  class="delivery__button delivery__button--active hidden"
+                  type="button"
+                >
+                  Гарантия
+                </button>
+                </div>
               </li>
               <li class="delivery__item delivery__item--possive">
                 <button
@@ -281,106 +305,59 @@
                 </button>
               </li>
             </ul>
-            <div class="delivery__description">
-              <div>
-                <h2 class="caption">Доставка</h2>
-                <p class="delivery__text">
-                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                  совершенно бесплатно! Ведь мы неплохо<br>заработаем, поднимая его
-                  на ваш этаж.
-                </p>
+            <div id="delivery__description">
+              <div class="delivery__description">
+                <div>
+                  <h2 class="caption">Доставка</h2>
+                  <p class="delivery__text">
+                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                    совершенно бесплатно! Ведь мы неплохо<br>заработаем, поднимая его
+                    на ваш этаж.
+                  </p>
+                </div>
+                <img
+                  class="delivery__img"
+                  src="./img/delivery.svg"
+                  alt="Доставка"
+                />
               </div>
-              <img
-                class="delivery__img"
-                src="./img/delivery.svg"
-                alt="Доставка"
-              />
+            </div>
+
+            <div id="guarantee-description" class="hidden">
+              <div class=" delivery__description">
+                <div>
+                  <h2 class="caption">Гарантия</h2>
+                  <p class="delivery__text">
+                    Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+                    Товар, не дом, конечно же.
+                  </p>
+                </div>
+                <img
+                  class="delivery__img"
+                  src="./img/delivery_slide.svg"
+                  alt="Доставка"
+                />
+              </div>
+            </div>
+
+
+            <div class="hidden">
+              <div class="delivery__description">
+                <div>
+                  <h2 class="caption">Кредит</h2>
+                  <p class="delivery__text">
+                    Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.
+                  </p>
+                </div>
+                <img
+                  class="delivery__img"
+                  src="./img/delivery_slide_2.svg"
+                  alt="Доставка"
+                />
+              </div>
             </div>
           </div>
 
-          <div class="delivery__wrapper delivery__slide">
-            <ul class="delivery__list">
-              <li class="delivery__item delivery__item--possive">
-                <button
-                  class="delivery__button"
-                  type="button"
-                >
-                  Доставка
-                </button>
-              </li>
-              <li class="delivery__item">
-                <button
-                  class="delivery__button delivery__button--active"
-                  type="button"
-                >
-                  Гарантия
-                </button>
-              </li>
-              <li class="delivery__item delivery__item--possive">
-                <button
-                  class="delivery__button"
-                  type="button"
-                >
-                  Кредит
-                </button>
-              </li>
-            </ul>
-            <div class="delivery__description">
-              <div>
-                <h2 class="caption">Гарантия</h2>
-                <p class="delivery__text">
-                  Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
-                  Товар, не дом, конечно же.
-                </p>
-              </div>
-              <img
-                class="delivery__img"
-                src="./img/delivery_slide.svg"
-                alt="Доставка"
-              />
-            </div>
-          </div>
-
-          <div class="delivery__wrapper delivery__slide">
-            <ul class="delivery__list">
-              <li class="delivery__item delivery__item--possive">
-                <button
-                  class="delivery__button"
-                  type="button"
-                >
-                  Доставка
-                </button>
-              </li>
-              <li class="delivery__item delivery__item--possive">
-                <button
-                  class="delivery__button"
-                  type="button"
-                >
-                  Гарантия
-                </button>
-              </li>
-              <li class="delivery__item">
-                <button
-                  class="delivery__button delivery__button--active"
-                  type="button"
-                >
-                  Кредит
-                </button>
-              </li>
-            </ul>
-            <div class="delivery__description">
-              <div>
-                <h2 class="caption">Кредит</h2>
-                <p class="delivery__text">
-                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.
-                </p>
-              </div>
-              <img
-                class="delivery__img"
-                src="./img/delivery_slide_2.svg"
-                alt="Доставка"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -463,6 +440,8 @@
                 </li>
               </ul>
               <a class="about__link" href="#">Подробнее о нас</a>
+              <script>
+              </script>
             </div>
 
             <div class="about__contacts about__box">
@@ -471,6 +450,7 @@
                 Вы можете забрать товар сами, заехав в наш офис. Заодно, вы
                 сможете проверить работоспособность покупки. Всякое бывает.
               </p>
+            <button id="button_map" type="button" class="about__contacts-button">
               <img
                 class="about__contacts-img"
                 width="560px"
@@ -478,38 +458,44 @@
                 src="./img/map.jpg"
                 alt="Карта офиса"
               />
-              <a class="about__link" href="#">Напишите нам</a>
-            </div>
+            </button>
 
-            <div class="about__form-inner delivery__slide" >
-              <form class="about__form" action="" method="post" >
-                <p class="form__item form__item_name">
-                  <label class="form__text" for="name">Ваше имя:</label>
-                  <input class="form__input-name" id="name" type="text" placeholder="Имя Фамилия">
-                </p>
+            <button id="about_button" type="button" class="about__button">Напишите нам</button>
 
-                <p class="form__item">
-                  <label class="form__text" for="email">Ваш e-mail:</label>
-                  <input class="form__input-email" id="email" type="email" placeholder="email@example.com">
-                </p>
-
-                <p class="form__item form__item-text">
-                  <label  class="form__text" for="name">Текст письма:</label>
-                  <input class="form__input-text" id="name" type="text" placeholder="В свободной форме">
-                </p>
-
-                <p class="form__item about__form-button">
-                  <button class="form__button" type="button">Отправить</button>
-                </p>
-              </form>
-            </div>
-
-            <div id="map" class="map__inner delivery__slide">
-              <div class="map">
-                <script src="https://api-maps.yandex.ru/2.1/?apikey=3bebce74-9f62-4e43-a3e1-0733ffbed08d&lang=ru_RU">
-                </script>
-                <script src="index.js"></script>
+            <div id="about-form" class="hidden  about__form-wrapper">
+              <div id="about-form" class="about__form-inner" >
+                <div id="form-button" class="form__button-inner">
+                  <button type="button" class="form__button-close">
+                    <img src="./img/form_close.svg" width="55px" height="55px"  alt="">
+                  </button>
+                </div>
+                <form class="about__form" action="" method="post" >
+                  <div class="form__item form__item_name">
+                    <label class="form__text" for="name">Ваше имя:</label>
+                    <input class="form__input-name" id="name" type="text" placeholder="Имя Фамилия">
+                  </div>
+  
+                  <div class="form__item">
+                    <label class="form__text" for="email">Ваш e-mail:</label>
+                    <input class="form__input-email" id="email" type="email" placeholder="email@example.com">
+                  </div>
+  
+                  <div class="form__item form__item-text">
+                    <label  class="form__text" for="name">Текст письма:</label>
+                    <input class="form__input-text" id="name" type="text" placeholder="В свободной форме">
+                  </div>
+  
+                  <div class="form__item about__form-button">
+                    <button class="form__button" type="submit">Отправить</button>
+                  </div>
+                </form>
               </div>
+              <div class="overlay"></div>
+            </div>
+
+            <div id="map-wrapper"  class="map__inner hidden">
+              <div id="map" class="map__container"> </div>
+              <div id="map-overlay" class="overlay"></div>
             </div>
           </div>
         </div>
@@ -623,5 +609,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3bebce74-9f62-4e43-a3e1-0733ffbed08d&lang=ru_RU">
+                </script>
+                <script src="index.js"></script>
   </body>
 </html>
