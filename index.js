@@ -26,42 +26,99 @@ function onAboutClick() {
     aboutForm.classList.toggle("hidden");
 }
 
-function onDeliveryGuarantee() {
-    const deliveryActive = document.querySelector("#delivery-active");
-    const deliveryPossive = document.querySelector("#delivery-possive");
-    const buttonGuaranteeActive = document.querySelector("#button-guarantee-active");
-    const deliveryDescription = document.querySelector("#delivery__description");
-    const deliveryGuarantee = document.querySelector("#guarantee-description");
+const mapHandler = () => {
+    const buttonMap = document.querySelector("#button_map");
+    const mapOverlay = document.querySelector("#map-overlay");
 
-    deliveryActive.classList.toggle("hidden");
-    deliveryPossive.classList.toggle("hidden");
-    buttonGuaranteeActive.classList.remove("delivery__item--possive");
-    buttonGuaranteeActive.classList.add("delivery__button--active");
-    deliveryDescription.classList.toggle("hidden");
-    deliveryGuarantee.classList.toggle("hidden");
-
+    buttonMap.addEventListener("click", onMapClick);
+    mapOverlay.addEventListener("click", onMapClick);
 }
 
+const catalogHandler = () => {
+    const linkCatalog = document.querySelector("#catalog-link");
+
+    linkCatalog.addEventListener("mouseover", onCatalogMouseover);
+    linkCatalog.addEventListener("mouseout", onCatalogMouseover);
+}
+
+const formHandler = () => {
+    const buttonAbout = document.querySelector("#about_button");
+    const buttonForm = document.querySelector("#form-button");
+
+    buttonAbout.addEventListener("click", onAboutClick);
+    buttonForm.addEventListener("click", onAboutClick);
+}
+
+const clearButtonsClasses = () => {
+    const buttonCredit = document.querySelector("#button-credit");
+    const buttonGuarantee = document.querySelector("#button-guarantee");
+    const buttonDelivery = document.querySelector("#button-delivery");
+
+    buttonCredit.classList.remove('slider__button--active');
+    buttonDelivery.classList.remove('slider__button--active');
+    buttonGuarantee.classList.remove('slider__button--active');
+}
+
+const clearSlidesClasses = () => {
+    const slideCredit = document.querySelector("#credit-slide");
+    const slideGuarantee = document.querySelector("#guarantee-slide");
+    const slideDelivery = document.querySelector("#delivery-slide");
+
+    if (!slideCredit.classList.contains("hidden")) {
+        slideCredit.classList.add("hidden");
+    }
+
+    if (!slideDelivery.classList.contains("hidden")) {
+        slideDelivery.classList.add("hidden");
+    }
+
+    if (!slideGuarantee.classList.contains("hidden")) {
+        slideGuarantee.classList.add("hidden");
+    };
+}
+
+const sliderHendler = () => {
+    const buttonCredit = document.querySelector("#button-credit");
+    const buttonGuarantee = document.querySelector("#button-guarantee");
+    const buttonDelivery = document.querySelector("#button-delivery");
+
+    const slideCredit = document.querySelector("#credit-slide");
+    const slideGuarantee = document.querySelector("#guarantee-slide");
+    const slideDelivery = document.querySelector("#delivery-slide");
+
+    buttonGuarantee.addEventListener("click", () => {
+        clearButtonsClasses();
+        buttonGuarantee.classList.add('slider__button--active');
+
+        clearSlidesClasses();
+        slideGuarantee.classList.remove("hidden");
+    });
+
+    buttonCredit.addEventListener("click", () => {
+        clearButtonsClasses();
+        buttonCredit.classList.add('slider__button--active');
+
+        clearSlidesClasses();
+        slideCredit.classList.remove("hidden");
+    });
+
+    buttonDelivery.addEventListener("click", () => {
+        clearButtonsClasses();
+        buttonDelivery.classList.add('slider__button--active');
+
+        clearSlidesClasses();
+        slideDelivery.classList.remove("hidden");
+    });
+
+}
 
 function init() {
-   const buttonMap = document.querySelector("#button_map");
-   const mapOverlay = document.querySelector("#map-overlay");
-   const linkCatalog = document.querySelector("#catalog-link");
-   const buttonAbout = document.querySelector("#about_button");
-   const buttonForm = document.querySelector("#form-button");
-   const buttonGuarantee = document.querySelector("#button-guarantee");
-
-   buttonMap.addEventListener("click", onMapClick);
-   mapOverlay.addEventListener("click", onMapClick);
-   linkCatalog.addEventListener("mouseover", onCatalogMouseover);
-   linkCatalog.addEventListener("mouseout", onCatalogMouseover);
-   buttonAbout.addEventListener("click", onAboutClick);
-   buttonForm.addEventListener("click", onAboutClick);
-   buttonGuarantee.addEventListener("click", onDeliveryGuarantee);
+    mapHandler();
+    catalogHandler();
+    formHandler();
+    sliderHendler();
 }
 
-window.addEventListener("load", function (event) {
-    init();
-});
+window.addEventListener("load", init);
 
 

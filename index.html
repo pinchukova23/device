@@ -47,13 +47,46 @@
             </ul>
 
             <ul class="header__list-continuation">
-              <li class="header__item header__item-catalog">
+              <li  class="header__item header__item-catalog">
+               <div id="catalog-link">
                 <a
-                  id="catalog-link"
-                  class="heder__link heder__link-catalog header__hover"
-                  href="./catalog.html"
-                  >Kаталог товаров</a
-                >
+                class="heder__link heder__link-catalog header__hover"
+                href="./catalog.html"
+                >Kаталог товаров</a
+              >
+
+              <div id="menu-current" class="hidden">
+                <div  class="header__menu-current">
+                  <ul class="header__list-menu-current">
+                    <li class="header__item-menu-current">
+                      <a class="header__link-menu-current" href="#">Виртуальная реальность</a>
+                    </li>
+                    <li class="header__item-menu-current">
+                      <a class="header__link-menu-current" href="#">Моноподы для селфи</a>
+                    </li>
+                    <li class="header__item-menu-current">
+                      <a class="header__link-menu-current" href="#">Экшн-камеры</a>
+                    </li>
+                  </ul>
+
+                  <ul class="header__list-menu-current">
+                    <li class="header__item-menu-current">
+                      <a class="header__link-menu-current" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="header__item-menu-current">
+                      <a class="header__link-menu-current" href="#">Умные часы</a>
+                    </li>
+                  </ul>
+      
+                  <ul class="header__list-menu-current">
+                    <li class="header__item-menu-current">
+                      <a class="header__link-menu-current" href="#">Квадрокоптер</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+               </div>
+
               </li>
               <li class="header__item header__item-delivery">
                 <a class="heder__link header__hover" href="#">Доставка</a>
@@ -66,37 +99,6 @@
               </li>
             </ul>
           </nav>
-
-          <div id="menu-current" class="hidden">
-            <div  class="header__menu-current">
-              <ul class="header__list-menu-current">
-                <li class="header__item-menu-current">
-                  <a class="header__link-menu-current" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="header__item-menu-current">
-                  <a class="header__link-menu-current" href="#">Моноподы для селфи</a>
-                </li>
-                <li class="header__item-menu-current">
-                  <a class="header__link-menu-current" href="#">Экшн-камеры</a>
-                </li>
-              </ul>
-  
-              <ul class="header__list-menu-current">
-                <li class="header__item-menu-current">
-                  <a class="header__link-menu-current" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="header__item-menu-current">
-                  <a class="header__link-menu-current" href="#">Умные часы</a>
-                </li>
-              </ul>
-  
-              <ul class="header__list-menu-current">
-                <li class="header__item-menu-current">
-                  <a class="header__link-menu-current" href="#">Квадрокоптер</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </header>
@@ -260,24 +262,16 @@
           <div class="delivery__wrapper">
             <ul class="delivery__list">
               <li class="delivery__item">
-                <div id="delivery-active" class="delivery__button-wrapper">
-                  <button
-                  class="delivery__button delivery__button--active"
-                  type="button"
-                >
-                  Доставка
-                </button>
-                </div>
-
                 <button
-                id="delivery-possive"
-                  class="delivery__button delivery__item--possive hidden"
-                  type="button"
-                >
-                  Доставка
-                </button>
+                id="button-delivery"
+                class="delivery__button slider__button--active"
+                type="button"
+              >
+                Доставка
+              </button>
+
               </li>
-              <li id="button-guarantee-active" class="delivery__item delivery__item--possive">
+              <li class="delivery__item delivery__item--possive">
                 <button
                 id="button-guarantee"
                   class="delivery__button"
@@ -285,19 +279,10 @@
                 >
                   Гарантия
                 </button>
-
-                <div class="">
-                  <button
-                
-                  class="delivery__button delivery__button--active hidden"
-                  type="button"
-                >
-                  Гарантия
-                </button>
-                </div>
               </li>
               <li class="delivery__item delivery__item--possive">
                 <button
+                  id="button-credit"
                   class="delivery__button"
                   type="button"
                 >
@@ -305,56 +290,48 @@
                 </button>
               </li>
             </ul>
-            <div id="delivery__description">
-              <div class="delivery__description">
-                <div>
-                  <h2 class="caption">Доставка</h2>
-                  <p class="delivery__text">
-                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                    совершенно бесплатно! Ведь мы неплохо<br>заработаем, поднимая его
-                    на ваш этаж.
-                  </p>
-                </div>
-                <img
-                  class="delivery__img"
-                  src="./img/delivery.svg"
-                  alt="Доставка"
-                />
+            <div id="delivery-slide" class="delivery__description">
+              <div>
+                <h2 class="caption">Доставка</h2>
+                <p class="delivery__text">
+                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                  совершенно бесплатно! Ведь мы неплохо<br>заработаем, поднимая его
+                  на ваш этаж.
+                </p>
               </div>
+              <img
+                class="delivery__img"
+                src="./img/delivery.svg"
+                alt="Доставка"
+              />
+            </div>
+            <div id="guarantee-slide" class="hidden delivery__description">
+              <div>
+                <h2 class="caption">Гарантия</h2>
+                <p class="delivery__text">
+                  Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+                  Товар, не дом, конечно же.
+                </p>
+              </div>
+              <img
+                class="delivery__img"
+                src="./img/delivery_slide.svg"
+                alt="Доставка"
+              />
             </div>
 
-            <div id="guarantee-description" class="hidden">
-              <div class=" delivery__description">
-                <div>
-                  <h2 class="caption">Гарантия</h2>
-                  <p class="delivery__text">
-                    Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
-                    Товар, не дом, конечно же.
-                  </p>
-                </div>
-                <img
-                  class="delivery__img"
-                  src="./img/delivery_slide.svg"
-                  alt="Доставка"
-                />
+            <div id="credit-slide" class="hidden delivery__description">
+              <div>
+                <h2 class="caption">Кредит</h2>
+                <p class="delivery__text">
+                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.
+                </p>
               </div>
-            </div>
-
-
-            <div class="hidden">
-              <div class="delivery__description">
-                <div>
-                  <h2 class="caption">Кредит</h2>
-                  <p class="delivery__text">
-                    Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.
-                  </p>
-                </div>
-                <img
-                  class="delivery__img"
-                  src="./img/delivery_slide_2.svg"
-                  alt="Доставка"
-                />
-              </div>
+              <img
+                class="delivery__img"
+                src="./img/delivery_slide_2.svg"
+                alt="Доставка"
+              />
             </div>
           </div>
 
@@ -464,11 +441,9 @@
 
             <div id="about-form" class="hidden  about__form-wrapper">
               <div id="about-form" class="about__form-inner" >
-                <div id="form-button" class="form__button-inner">
-                  <button type="button" class="form__button-close">
-                    <img src="./img/form_close.svg" width="55px" height="55px"  alt="">
-                  </button>
-                </div>
+                <button id="form-button" type="button" class="form__button-close">
+                  <img src="./img/form_close.svg" width="55px" height="55px"  alt="">
+                </button>
                 <form class="about__form" action="" method="post" >
                   <div class="form__item form__item_name">
                     <label class="form__text" for="name">Ваше имя:</label>

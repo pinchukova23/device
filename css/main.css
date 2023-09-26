@@ -60,9 +60,6 @@ body {
     clip: rect(0 0 0 0);
 }
 
-.hidden {
-    display: none;
-}
 
 
 .header {
@@ -609,7 +606,7 @@ object-position: center;
     width: 160px;
 }
 
-.delivery__button--active {
+.slider__button--active {
     background-color: #000000;
     height: 40px;
     width: 277px;
@@ -833,22 +830,24 @@ margin-bottom: 21px;
     z-index: -1;
 }
 
-
-.about__form-inner {
+.about__form-wrapper {
     position: fixed;
-    top: auto;
-    left: 0;
+    top: 0;
     right: 0;
-    bottom: 1063px;
-    background-color: white;
-    width: 960px;
-    margin: auto;
-    padding: 92px 100px 69px;
-    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.15);
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
 }
 
-.form__button-inner {
+.about__form-inner {
+    background-color: white;
+    width: 960px;
+    padding: 92px 100px 69px;
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.15);
+    z-index: 2;
     position: relative;
 }
 
@@ -858,8 +857,8 @@ margin-bottom: 21px;
 
 .form__button-close {
     position: absolute;
-    top: -77px;
-    right: -79px;
+    top: 22px;
+    right: 29px;
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -1184,4 +1183,9 @@ object-position: center;
 
 .footer__media-item:last-child {
     margin-right: 0;
+}
+
+
+.hidden {
+    display: none;
 }
